@@ -28,6 +28,8 @@ This problem set uses two files from the [OASIS-3](https://www.oasis-brains.org/
 | `data/OASIS3_PUP.xlsx` | PET measurements — one row per scan session |
 | `data/OASIS3_demographics.xlsx` | Subject demographics (age, sex, APOE genotype) |
 
+> **Note on data access:** The `data/` folder in this repository is empty. The OASIS-3 dataset is restricted-access and must be applied for through [OASIS Brains](https://www.oasis-brains.org/). The two required files (`OASIS3_PUP.xlsx` and `OASIS3_demographics.xlsx`) will be shared with you directly by email once access is confirmed — place them in the `data/` folder before running any scripts.
+
 Key columns in `OASIS3_PUP.xlsx`:
 
 | Column | Description |
@@ -42,8 +44,8 @@ Key columns in `OASIS3_PUP.xlsx`:
 
 **1. Clone this repository**
 ```bash
-git clone https://github.com/your-username/pet-progression-analysis.git
-cd pet-progression-analysis
+git clone https://github.com/DylanEsguerra/PET-PROGRESSION-ANALYSIS.git
+cd PET-PROGRESSION-ANALYSIS
 ```
 
 **2. Create and activate a virtual environment**

@@ -62,18 +62,19 @@ def main():
 
     print(f"Subjects with ≥2 scans: {len(longitudinal_ids)}")
 
-    fig, ax = plt.subplots(figsize=(10, 6))
+    plt.figure(figsize=(10, 6))
 
     # ── TODO 1 ───────────────────────────────────────────────────────────────
     # For each subject in df_long, plot their trajectory.
     #
     # Steps:
     #   a) Group df_long by 'Subject_ID_Extracted'.
+    #      Note: do NOT write df_long = df_long.groupby(...) — use a for loop
+    #      so df_long stays a DataFrame and can be re-used in TODO 2.
     #
     #   b) For each group, sort by 'Years' so the line goes left → right.
     #
-    #   c) Plot a line (ax.plot) connecting the subject's time points,
-    #      and a scatter (ax.scatter) marking the individual measurements.
+    #   c) Plot a line and scatter for each group using plt.plot() / plt.scatter().
     #      Use:
     #        - color='steelblue'
     #        - alpha=0.25 for the line, alpha=0.35 for the scatter
@@ -91,13 +92,11 @@ def main():
     #      or pick one with many measurements:
     #        example_id = df_long.groupby('Subject_ID_Extracted').size().idxmax()
     #
-    #   b) Filter df_long to just that subject, sort by 'Years'.
+    #   b) Filter df_long to just that subject and sort by 'Years':
+    #        example = df_long[df_long['Subject_ID_Extracted'] == example_id].sort_values('Years')
     #
-    #   c) Re-plot their line with:
-    #        - color='crimson', linewidth=2.5, zorder=5
-    #        - label=f"Example: {example_id}"
-    #      and their scatter with:
-    #        - color='crimson', s=50, zorder=6, edgecolors='white', linewidths=0.6
+    #   c) Re-plot using plt.plot() and plt.scatter() with color='crimson'
+    #      and a label so the subject appears in the legend.
     #
     # YOUR CODE HERE
     raise NotImplementedError("TODO 2: highlight one example subject")
@@ -105,25 +104,23 @@ def main():
     # ── TODO 3 ───────────────────────────────────────────────────────────────
     # Finalize the figure:
     #
-    #   a) Set axis labels:
-    #        x: "Years Since First Scan"
-    #        y: "Centiloid (non-RSF)"
-    #      Use fontsize=13 for both.
+    #   a) Set axis labels (fontsize=13):
+    #        plt.xlabel("Years Since First Scan", fontsize=13)
+    #        plt.ylabel("Centiloid (non-RSF)", fontsize=13)
     #
-    #   b) Add a title: "Longitudinal PIB Centiloid Trajectories"
-    #      fontsize=14, fontweight='bold'
+    #   b) Add a title:
+    #        plt.title("Longitudinal PIB Centiloid Trajectories", fontsize=14, fontweight='bold')
     #
-    #   c) Add a legend (ax.legend) showing only the highlighted subject.
-    #      Use frameon=False.
+    #   c) Add a legend and light grid:
+    #        plt.legend(frameon=False)
+    #        plt.grid(True, linestyle='--', alpha=0.2)
     #
-    #   d) Add a light grid: ax.grid(True, linestyle='--', alpha=0.2)
-    #
-    #   e) Remove the top and right spines:
+    #   d) Remove the top and right spines:
+    #        ax = plt.gca()
     #        ax.spines['top'].set_visible(False)
     #        ax.spines['right'].set_visible(False)
     #
-    #   f) Call fig.tight_layout() then save to results/trajectories.png at dpi=200.
-    #      Print the save path when done.
+    #   e) Save: plt.tight_layout() then plt.savefig(..., dpi=200)
     #
     # YOUR CODE HERE
     raise NotImplementedError("TODO 3: finalize and save the figure")

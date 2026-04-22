@@ -65,11 +65,17 @@ pip install -r requirements.txt
 ## Problem Set
 
 Work through the four parts **in order** — each one builds on the previous.  
-Each script contains numbered `TODO` sections with detailed instructions.  
-Reflection questions at the end of each script require written answers (add them as comments).
+Each file contains numbered `TODO` sections with detailed instructions.  
+Reflection questions at the end of each part require written answers.
 
-### Part 1 — Explore the Dataset (`part1_explore.py`)
+### Part 1 — Explore the Dataset
 *Learn to load the data, understand its structure, and produce basic summary statistics.*
+
+**Preferred approach — Jupyter Notebook (`part1_explore.ipynb`)**  
+Open `part1_explore.ipynb` in VS Code. The first cell contains setup instructions if you haven't used Jupyter in VS Code before. Work through the cells top to bottom.
+
+**Fallback — Python script (`part1_explore.py`)**  
+If you run into issues with the notebook (kernel won't start, extension problems, etc.), the same exercise is available as a plain Python script. Contact Dylan and he can help you get the notebook working, but in the meantime:
 
 ```bash
 python part1_explore.py

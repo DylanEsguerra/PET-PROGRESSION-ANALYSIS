@@ -59,6 +59,23 @@ source .venv/bin/activate        # macOS
 pip install -r requirements.txt
 ```
 
+---
+
+## Working with Jupyter Notebooks in VS Code
+
+Parts 1 and 2 are provided as Jupyter notebooks (`.ipynb` files). If you haven't used Jupyter in VS Code before, follow these steps.
+
+**Install the Jupyter extension**  
+Open VS Code, go to the Extensions panel (Ctrl+Shift+X / Cmd+Shift+X), search for **Jupyter**, and install it.
+
+**Select the `.venv` kernel**  
+When you open a notebook, VS Code will show a **Select Kernel** button in the top-right corner. Click it, choose **Python Environments**, and select the `.venv` environment you created above. This ensures the notebook uses the same packages you installed with `pip`. If `.venv` doesn't appear, make sure you ran `python -m venv .venv` and `pip install -r requirements.txt` first.
+
+**Running cells**  
+Click the **▶ Run Cell** button to the left of a cell, or press **Shift + Enter** to run and advance to the next cell. Always run cells in order from top to bottom — each one builds on the previous.
+
+**If you get an unexpected error**  
+The problem is often in an earlier cell rather than the one that errored. For example, if you accidentally overwrote a variable, re-running the later cell won't fix it. Use **Run All** (the ▶▶ button in the toolbar) to reset the entire notebook from the top, then try again.
 
 ---
 

@@ -91,8 +91,13 @@ python part1_explore.py
 
 ---
 
-### Part 2 — Longitudinal Trajectories (`part2_trajectories.py`)
+### Part 2 — Longitudinal Trajectories
 *Visualise how each subject's amyloid load changes over time.*
+
+**Preferred approach — Jupyter Notebook (`part2_trajectories.ipynb`)**  
+Open `part2_trajectories.ipynb` in VS Code and run cells top to bottom.
+
+**Fallback — Python script (`part2_trajectories.py`)**
 
 ```bash
 python part2_trajectories.py
